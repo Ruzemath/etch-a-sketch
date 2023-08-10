@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./sketch.js" defer></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch a Sketch</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title"><h1>Etch-a-Sketch</h1></div>
+        <div class="draw">Draw: Enabled</div>
+        <div class="mode">Mode: None</div>
+        <div class="content">
+            <div class="grid"></div>
+            <div class="options">
+                <input id="colorChoice" type="color" value="#000"/>
+                <button id="color" onclick="newChoice('color')">Color</button>
+                <button id="rainbow" onclick="newChoice('rainbow')">Rainbow</button>
+                <button id="eraser" onclick="newChoice('eraser')">Eraser</button>
+                <button id="reset" onclick="resetGrid()">Reset</button>
+            </div>
+            <div class="size">
+                <div id="sizeValue">16x16</div>
+                <input id="text" type="text" placeholder="Size Of Grid" onchange="newSize(this.value)"/>
+                <button id="setSize">Set Size</button>
+                <input id="slider" type="range" value="16" min="2" max="64" onchange="newSize(this.value)"/>
+            </div>
+            <div class="error"> ERROR: INPUT MUST BE BETWEEN 2 - 64</div>
+        </div>
+    </div>
+</body>
+</html>
