@@ -14,21 +14,21 @@
         <div class="draw">Draw: Enabled</div>
         <div class="mode">Mode: None</div>
         <div class="content">
+            <div class="size">
+                <div id="sizeValue">16 x 16</div>
+                <input id="text" type="text" placeholder="Enter Grid Size" onchange="newSize(this.value)"/>
+                <button id="setSize">Set Size</button>
+                <input id="slider" type="range" value="16" min="2" max="128" onchange="newSize(this.value)"/>
+            </div>
             <div class="grid"></div>
             <div class="options">
-                <input id="colorChoice" type="color" value="#000"/>
+                <input id="colorChoice" type="color" value="#000000" style="background: #000000;"/>
                 <button id="color" onclick="newChoice('color')">Color</button>
                 <button id="rainbow" onclick="newChoice('rainbow')">Rainbow</button>
                 <button id="eraser" onclick="newChoice('eraser')">Eraser</button>
                 <button id="reset" onclick="resetGrid()">Reset</button>
             </div>
-            <div class="size">
-                <div id="sizeValue">16x16</div>
-                <input id="text" type="text" placeholder="Size Of Grid" onchange="newSize(this.value)"/>
-                <button id="setSize">Set Size</button>
-                <input id="slider" type="range" value="16" min="2" max="64" onchange="newSize(this.value)"/>
-            </div>
-            <div class="error"> ERROR: INPUT MUST BE BETWEEN 2 - 64</div>
+            <div class="error"> ERROR: INPUT MUST BE BETWEEN 2 - 128</div>
         </div>
     </div>
 </body>

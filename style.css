@@ -1,10 +1,153 @@
 body
 {
-    background-color: salmon;
+    background: rgb(209,102,110);
+    background: linear-gradient(rgba(209,102,110,1) 18%, rgba(215,80,90,1) 37%, rgba(219,65,76,1) 53%);
+}
+
+.title
+{
+    display: flex;
+    justify-content: center;
+}
+
+.container
+{
+    height: 100vh;
+    width: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .grid
 {
-    width: 500px;
-    height: 500px;
+    width: 750px;
+    height: 750px;
     display: grid;
+    background-color: white;
+}
+
+button:hover, input:hover
+{
+    cursor: pointer;
+}
+
+button:hover
+{
+    background-color: rgb(255,255,51);
+}
+
+.error
+{
+    display: none;
+    font-size: 18px;
+    font-weight: 3px;
+    margin-right: 10px;
+    color: white;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    height: 60vw;
+    max-width: 500px;
+    max-height: 800px;
+}
+
+.options
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button, input[type='color'] 
+{
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+input[type=range] 
+{
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track 
+{
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000;
+    background: rgb(209,102,110);
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb 
+{
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 26px;
+    width: 15px;
+    border-radius: 5px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6.5px;
+}
+
+#text 
+{
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px rgba(66,66,66,.75); 
+}
+
+#setSize
+{
+    margin-left: 5px;
+}
+
+#sizeValue
+{
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-weight: 3px;
+    color: white;
+}
+
+input[type='color'] 
+{
+    border: none;
+}
+  
+
+input[type='color']::-webkit-color-swatch 
+{
+    border: none;
+    border-radius: 12px;
+} 
+
+.draw,.mode
+{
+    font-size: 25px;
+    color:black;
+    font-weight: bold;
 }
